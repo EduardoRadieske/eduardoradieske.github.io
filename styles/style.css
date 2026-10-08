@@ -52,23 +52,23 @@ footer {
 
 /* Tema claro — mantém o comportamento padrão */
 [data-bs-theme="light"] .theme-btn-github {
-  color: #212529;
-  border-color: #212529;
+    color: #212529;
+    border-color: #212529;
 }
 
 [data-bs-theme="light"] .theme-btn-github:hover {
-  background-color: #212529;
-  color: #fff;
+    background-color: #212529;
+    color: #fff;
 }
 
 [data-bs-theme="dark"] .theme-btn-github {
-  color: #f8f9fa !important;
-  border-color: #f8f9fa !important;
+    color: #f8f9fa !important;
+    border-color: #f8f9fa !important;
 }
 
 [data-bs-theme="dark"] .theme-btn-github:hover {
-  background-color: #f8f9fa !important;
-  color: #212529 !important;
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
 }
 
 .navbar {
@@ -83,17 +83,18 @@ footer {
 }
 
 .navbar .form-check.form-switch {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 @media (min-width: 992px) {
-  .navbar .collapse.navbar-collapse {
-    order: 1;
-  }
-  .navbar .d-flex.order-lg-2 {
-    order: 2;
-  }
+    .navbar .collapse.navbar-collapse {
+        order: 1;
+    }
+
+    .navbar .d-flex.order-lg-2 {
+        order: 2;
+    }
 }
 
 .section-divider {
@@ -142,6 +143,19 @@ footer {
     border-right: 3px solid #0d6efd;
     font-family: 'Poppins', sans-serif;
     animation: typing 3.5s steps(30, end), blink 0.7s step-end infinite;
+}
+
+.theme-btn-gitlab {
+    background-color: #fff;
+    color: #FC6D26;
+    border: 1px solid #FC6D26;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-btn-gitlab:hover {
+    background-color: #FC6D26;
+    border-color: #FC6D26;
+    color: #fff;
 }
 
 @media (max-width: 576px) {
