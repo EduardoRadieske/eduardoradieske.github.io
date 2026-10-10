@@ -54,25 +54,29 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <a class="visually-hidden-focusable" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" aria-label="Navegação principal">
         <div class="container d-flex align-items-center justify-content-between">
 
             <!-- Marca -->
-            <a class="navbar-brand fw-bold" href="#">Eduardo Radieske</a>
+            <a class="navbar-brand fw-bold" href="#home">Eduardo Radieske</a>
 
             <!-- Grupo do botão e switch -->
             <div class="d-flex align-items-center order-lg-2">
                 <!-- Botão hamburguer -->
-                <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Abrir ou fechar menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- Switch único -->
                 <div class="form-check form-switch text-light d-flex align-items-center">
-                    <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch"
+                        aria-label="Ativar tema escuro">
                     <label class="form-check-label ms-1" for="themeSwitch">
-                        <i id="themeIcon" class="bi bi-sun"></i>
+                        <i id="themeIcon" class="bi bi-sun" aria-hidden="true"></i>
                     </label>
                 </div>
             </div>
@@ -91,8 +95,8 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header id="home">
+    <main id="conteudo">
+        <header id="home">
         <div class="container">
             <div>
                 <img src="images/eduardoradieske.jpeg" loading="lazy" alt="Foto de Eduardo Radieske"
@@ -103,12 +107,11 @@
                 Software Engineer • Engenheiro de Controle e Automação
             </p>
         </div>
-    </header>
+        </header>
 
-    <!-- Sobre -->
-    <section id="sobre" class="bg-body">
+        <section id="sobre" class="bg-body" aria-labelledby="titulo-sobre">
         <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
+            <h2 id="titulo-sobre" class="section-title">Sobre Mim</h2>
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <p> Sou <strong>Engenheiro de Software</strong> com mais de 5 anos de experiência no desenvolvimento
@@ -133,18 +136,17 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <hr class="section-divider" />
+        <hr class="section-divider" aria-hidden="true" />
 
-    <!-- Experiência -->
-    <section id="experiencia" class="bg-body">
+        <section id="experiencia" class="bg-body" aria-labelledby="titulo-experiencia">
         <div class="container">
-            <h2 class="section-title">Experiência Profissional</h2>
+            <h2 id="titulo-experiencia" class="section-title">Experiência Profissional</h2>
             <div class="row justify-content-center g-4">
                 <div class="col-lg-7">
-                    <div class="mb-5">
-                        <h5>Software Engineer</h5>
+                    <article class="mb-5">
+                        <h3 class="h5">Software Developer</h3>
                         <p class="text-muted">YZY Digital (2025 – Atual)</p>
 
                         <p> Atuo no desenvolvimento e na evolução de sistemas corporativos, com foco em soluções
@@ -154,9 +156,9 @@
                             APIs e arquivos de dados. </p>
                         <p> Também participo da análise de requisitos, investigação de problemas e definição de soluções
                             técnicas, contribuindo para a confiabilidade, manutenibilidade e evolução dos sistemas. </p>
-                    </div>
-                    <div class="mb-4">
-                        <h5>Full Stack Developer</h5>
+                    </article>
+                    <article class="mb-4">
+                        <h3 class="h5">Full Stack Developer</h3>
                         <p class="text-muted">TECNICON (2021 – 2025)</p>
                         <p>Atuei como desenvolvedor full stack no desenvolvimento de sistemas ERP, participando de todas
                             as
@@ -170,19 +172,18 @@
                             padrões técnicos, resolução de problemas complexos e evolução contínua dos projetos em
                             equipes
                             multidisciplinares.</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <hr class="section-divider" />
+        <hr class="section-divider" aria-hidden="true" />
 
-    <!-- Projetos -->
-    <section id="projetos" class="bg-body">
+        <section id="projetos" class="bg-body" aria-labelledby="titulo-projetos">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title">Soluções Desenvolvidas</h2>
+                <h2 id="titulo-projetos" class="section-title">Soluções Desenvolvidas</h2>
                 <p class="text-muted mt-3">
                     Abaixo estão alguns exemplos de projetos e soluções nos quais atuei diretamente na análise e
                     implementação
@@ -193,10 +194,10 @@
             <div class="row">
                 <!-- Integrações de Documentos Fiscais -->
                 <div class="col-md-4 mb-4">
-                    <div class="card-projeto card shadow-sm h-100">
+                    <article class="card-projeto card shadow-sm h-100">
                         <div class="card-body text-center">
-                            <i class="bi bi-file-earmark-text display-4 text-primary mb-3"></i>
-                            <h5 class="card-title">Documentos Fiscais Eletrônicos</h5>
+                            <i class="bi bi-file-earmark-text display-4 text-primary mb-3" aria-hidden="true"></i>
+                            <h3 class="h5 card-title">Documentos Fiscais Eletrônicos</h3>
                             <p class="card-text">
                                 Integrações NF-e, NFC-e, NFS-e, CT-e, MDF-e e CF-e — automação completa de emissão,
                                 recepção e
@@ -204,219 +205,216 @@
                                 de documentos fiscais, com foco em confiabilidade e conformidade tributária.
                             </p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- Integração TEF Web e Desktop -->
                 <div class="col-md-4 mb-4">
-                    <div class="card-projeto card shadow-sm h-100">
+                    <article class="card-projeto card shadow-sm h-100">
                         <div class="card-body text-center">
-                            <i class="bi bi-credit-card-2-front display-4 text-success mb-3"></i>
-                            <h5 class="card-title">Integração TEF Web e Desktop com Pin-Pad</h5>
+                            <i class="bi bi-credit-card-2-front display-4 text-success mb-3" aria-hidden="true"></i>
+                            <h3 class="h5 card-title">Integração TEF Web e Desktop com Pin-Pad</h3>
                             <p class="card-text">
                                 Desenvolvimento de soluções para comunicação com terminais de pagamento, garantindo
                                 segurança,
                                 compatibilidade e alta disponibilidade em transações presenciais e online.
                             </p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- Soluções de Pagamento Online -->
                 <div class="col-md-4 mb-4">
-                    <div class="card-projeto card shadow-sm h-100">
+                    <article class="card-projeto card shadow-sm h-100">
                         <div class="card-body text-center">
-                            <i class="bi bi-wallet2 display-4 text-info mb-3"></i>
-                            <h5 class="card-title">Soluções de Pagamento Online</h5>
+                            <i class="bi bi-wallet2 display-4 text-info mb-3" aria-hidden="true"></i>
+                            <h3 class="h5 card-title">Soluções de Pagamento Online</h3>
                             <p class="card-text">
                                 Implementação e integração de APIs de pagamento e gateways online, permitindo o
                                 processamento de transações e a integração com diferentes serviços financeiros.
                             </p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- Assinatura Digital de Documentos -->
                 <div class="col-md-4 mb-4">
-                    <div class="card-projeto card shadow-sm h-100">
+                    <article class="card-projeto card shadow-sm h-100">
                         <div class="card-body text-center">
-                            <i class="bi bi-pencil-square display-4 text-warning mb-3"></i>
-                            <h5 class="card-title">Assinatura Digital de Documentos</h5>
+                            <i class="bi bi-pencil-square display-4 text-warning mb-3" aria-hidden="true"></i>
+                            <h3 class="h5 card-title">Assinatura Digital de Documentos</h3>
                             <p class="card-text">
                                 Criação de fluxos automatizados para assinatura e validação de documentos digitais,
                                 priorizando
                                 conformidade legal, rastreabilidade e integração com plataformas externas.
                             </p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- Sistemas Financeiros e Integrações -->
                 <div class="col-md-4 mb-4">
-                    <div class="card-projeto card shadow-sm h-100">
-                        <div class="card-body text-center"> <i class="bi bi-bank display-4 text-primary mb-3"></i>
-                            <h5 class="card-title">Sistemas Financeiros e Integrações</h5>
+                    <article class="card-projeto card shadow-sm h-100">
+                        <div class="card-body text-center"> <i class="bi bi-bank display-4 text-primary mb-3" aria-hidden="true"></i>
+                            <h3 class="h5 card-title">Sistemas Financeiros e Integrações</h3>
                             <p class="card-text"> Desenvolvimento de sistemas para processamento e conciliação de
                                 transações financeiras, integração com adquirentes e automação de processos por meio de
                                 APIs e arquivos de dados. </p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- Integrações com E-commerce e Marketplaces -->
                 <div class="col-md-4 mb-4">
-                    <div class="card-projeto card shadow-sm h-100">
+                    <article class="card-projeto card shadow-sm h-100">
                         <div class="card-body text-center">
-                            <i class="bi bi-cart-check display-4 text-danger mb-3"></i>
-                            <h5 class="card-title">Integrações com E-commerce e Marketplaces</h5>
+                            <i class="bi bi-cart-check display-4 text-danger mb-3" aria-hidden="true"></i>
+                            <h3 class="h5 card-title">Integrações com E-commerce e Marketplaces</h3>
                             <p class="card-text">
                                 Conexão com plataformas de vendas online para sincronização de produtos, pedidos e
                                 estoque,
                                 ampliando a eficiência operacional e o alcance comercial.
                             </p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <hr class="section-divider" />
+        <hr class="section-divider" aria-hidden="true" />
 
-    <!-- Formação -->
-    <section id="formacao" class="bg-body py-5">
+        <section id="formacao" class="bg-body py-5" aria-labelledby="titulo-formacao">
         <div class="container">
-            <h2 class="section-title text-center mb-5">Formação Acadêmica</h2>
+            <h2 id="titulo-formacao" class="section-title text-center mb-5">Formação Acadêmica</h2>
             <div class="row justify-content-center">
 
                 <div class="col-md-5 mb-4">
-                    <div class="card shadow-sm h-100">
+                    <article class="card shadow-sm h-100">
                         <div class="card-body text-center">
-                            <h5 class="card-title fw-bold">Engenharia de Controle e Automação</h5>
+                            <h3 class="h5 card-title fw-bold">Engenharia de Controle e Automação</h3>
                             <p class="card-text text-muted mb-1">FAHOR - Faculdade Horizontina</p>
                             <p class="card-text"><small class="text-secondary">Concluído em 2026</small></p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <div class="col-md-5 mb-4">
-                    <div class="card shadow-sm h-100">
+                    <article class="card shadow-sm h-100">
                         <div class="card-body text-center">
-                            <h5 class="card-title fw-bold">Técnico em Informática</h5>
+                            <h3 class="h5 card-title fw-bold">Técnico em Informática</h3>
                             <p class="card-text text-muted mb-1">Centro Tecnológico Frederico Jorge Logemann </p>
                             <p class="card-text"><small class="text-secondary">Concluído em 2021</small></p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
             </div>
         </div>
-    </section>
+        </section>
 
-    <hr class="section-divider" />
+        <hr class="section-divider" aria-hidden="true" />
 
-    <!-- Habilidades -->
-    <section id="habilidades" class="bg-body py-5">
+        <section id="habilidades" class="bg-body py-5" aria-labelledby="titulo-habilidades">
         <div class="container">
-            <h2 class="section-title text-center mb-5">Habilidades Técnicas</h2>
-            <div class="mb-4">
-                <h4 class="card-title fw-bold mb-3 text-decoration-underline">Linguagens e Frameworks</h4>
-                <div class="d-flex flex-wrap gap-2">
-                    <span class="skill-badge">Java</span>
-                    <span class="skill-badge">C#</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">TypeScript</span>
-                    <span class="skill-badge">C/C++</span>
-                    <span class="skill-badge">HTML</span>
-                    <span class="skill-badge">CSS</span>
-                    <span class="skill-badge">Spring Boot</span>
-                    <span class="skill-badge">.NET</span>
-                    <span class="skill-badge">Node.js</span>
-                    <span class="skill-badge">React</span>
-                    <span class="skill-badge">Angular</span>
-                    <span class="skill-badge">Next.js</span>
-                </div>
-            </div>
-            <div class="mb-4">
-                <h4 class="card-title fw-bold mb-3 text-decoration-underline">Banco de Dados</h4>
-                <div class="d-flex flex-wrap gap-2">
-                    <span class="skill-badge">SQL</span>
-                    <span class="skill-badge">Firebird</span>
-                    <span class="skill-badge">PostgreSQL</span>
-                    <span class="skill-badge">MySQL</span>
-                    <span class="skill-badge">SQL Server</span>
-                    <span class="skill-badge">SQLite</span>
-                    <span class="skill-badge">JPA</span>
-                    <span class="skill-badge">Hibernate</span>
-                    <span class="skill-badge">NoSQL</span>
-                </div>
-            </div>
-            <div class="mb-4">
-                <h4 class="card-title fw-bold mb-3 text-decoration-underline">DevOps e Infraestrutura</h4>
-                <div class="d-flex flex-wrap gap-2">
-                    <span class="skill-badge">Docker</span>
-                    <span class="skill-badge">Git</span>
-                    <span class="skill-badge">Apache Kafka</span>
-                    <span class="skill-badge">CI/CD</span>
-                    <span class="skill-badge">Linux</span>
-                    <span class="skill-badge">Windows Server</span>
-                    <span class="skill-badge">Cloudflare</span>
-                    <span class="skill-badge">Redis</span>
-                </div>
-            </div>
-            <div class="mb-4">
-                <h4 class="card-title fw-bold mb-3 text-decoration-underline">Integrações e APIs</h4>
-                <div class="d-flex flex-wrap gap-2">
-                    <span class="skill-badge">REST</span>
-                    <span class="skill-badge">SOAP</span>
-                    <span class="skill-badge">OAuth 2.0</span>
-                    <span class="skill-badge">JSON </span>
-                    <span class="skill-badge">XML</span>
-                    <span class="skill-badge">GraphQL</span>
-                    <span class="skill-badge">DLL</span>
-                </div>
-            </div>
-            <div class="mb-4">
-                <h4 class="card-title fw-bold mb-3 text-decoration-underline">Qualidade de Código e Boas Práticas</h4>
-                <div class="d-flex flex-wrap gap-2">
-                    <span class="skill-badge">Clean Code</span>
-                    <span class="skill-badge">Clean Architecture</span>
-                    <span class="skill-badge">Domain-Driven Design (DDD)</span>
-                    <span class="skill-badge">SOLID Principles</span>
-                    <span class="skill-badge">Design Patterns</span>
-                    <span class="skill-badge">Code Review</span>
-                    <span class="skill-badge">Metodologias Ágeis</span>
-                    <span class="skill-badge">Testes Automatizados</span>
-                    <span class="skill-badge">Documentação de Código</span>
-                </div>
-            </div>
-            <div class="mb-4">
-                <h4 class="card-title fw-bold mb-3 text-decoration-underline">Desenvolvimento Mobile</h4>
-                <div class="d-flex flex-wrap gap-2">
-                    <span class="skill-badge">Android</span>
-                    <span class="skill-badge">iOS</span>
-                    <span class="skill-badge">Apache Cordova</span>
-                    <span class="skill-badge">Responsividade e UX Mobile</span>
-                    <span class="skill-badge">Push Notifications</span>
-                    <span class="skill-badge">Plugins e Integrações Nativas</span>
-                </div>
-            </div>
+            <h2 id="titulo-habilidades" class="section-title text-center mb-5">Habilidades Técnicas</h2>
+            <section class="skill-group mb-4" aria-labelledby="titulo-linguagens">
+                <h3 id="titulo-linguagens" class="card-title fw-bold mb-3 text-decoration-underline">Linguagens e Frameworks</h3>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">
+                    <li class="skill-badge">Java</li>
+                    <li class="skill-badge">C#</li>
+                    <li class="skill-badge">JavaScript</li>
+                    <li class="skill-badge">TypeScript</li>
+                    <li class="skill-badge">C/C++</li>
+                    <li class="skill-badge">HTML</li>
+                    <li class="skill-badge">CSS</li>
+                    <li class="skill-badge">Spring Boot</li>
+                    <li class="skill-badge">.NET</li>
+                    <li class="skill-badge">Node.js</li>
+                    <li class="skill-badge">React</li>
+                    <li class="skill-badge">Angular</li>
+                    <li class="skill-badge">Next.js</li>
+                </ul>
+            </section>
+            <section class="skill-group mb-4" aria-labelledby="titulo-bancos">
+                <h3 id="titulo-bancos" class="card-title fw-bold mb-3 text-decoration-underline">Banco de Dados</h3>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">
+                    <li class="skill-badge">SQL</li>
+                    <li class="skill-badge">Firebird</li>
+                    <li class="skill-badge">PostgreSQL</li>
+                    <li class="skill-badge">MySQL</li>
+                    <li class="skill-badge">SQL Server</li>
+                    <li class="skill-badge">SQLite</li>
+                    <li class="skill-badge">JPA</li>
+                    <li class="skill-badge">Hibernate</li>
+                    <li class="skill-badge">NoSQL</li>
+                </ul>
+            </section>
+            <section class="skill-group mb-4" aria-labelledby="titulo-devops">
+                <h3 id="titulo-devops" class="card-title fw-bold mb-3 text-decoration-underline">DevOps e Infraestrutura</h3>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">
+                    <li class="skill-badge">Docker</li>
+                    <li class="skill-badge">Git</li>
+                    <li class="skill-badge">Apache Kafka</li>
+                    <li class="skill-badge">CI/CD</li>
+                    <li class="skill-badge">Linux</li>
+                    <li class="skill-badge">Windows Server</li>
+                    <li class="skill-badge">Cloudflare</li>
+                    <li class="skill-badge">Redis</li>
+                </ul>
+            </section>
+            <section class="skill-group mb-4" aria-labelledby="titulo-integracoes">
+                <h3 id="titulo-integracoes" class="card-title fw-bold mb-3 text-decoration-underline">Integrações e APIs</h3>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">
+                    <li class="skill-badge">REST</li>
+                    <li class="skill-badge">SOAP</li>
+                    <li class="skill-badge">OAuth 2.0</li>
+                    <li class="skill-badge">JSON</li>
+                    <li class="skill-badge">XML</li>
+                    <li class="skill-badge">GraphQL</li>
+                    <li class="skill-badge">DLL</li>
+                </ul>
+            </section>
+            <section class="skill-group mb-4" aria-labelledby="titulo-qualidade">
+                <h3 id="titulo-qualidade" class="card-title fw-bold mb-3 text-decoration-underline">Qualidade de Código e Boas Práticas</h3>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">
+                    <li class="skill-badge">Clean Code</li>
+                    <li class="skill-badge">Clean Architecture</li>
+                    <li class="skill-badge">Domain-Driven Design (DDD)</li>
+                    <li class="skill-badge">SOLID Principles</li>
+                    <li class="skill-badge">Design Patterns</li>
+                    <li class="skill-badge">Code Review</li>
+                    <li class="skill-badge">Metodologias Ágeis</li>
+                    <li class="skill-badge">Testes Automatizados</li>
+                    <li class="skill-badge">Documentação de Código</li>
+                </ul>
+            </section>
+            <section class="skill-group mb-4" aria-labelledby="titulo-mobile">
+                <h3 id="titulo-mobile" class="card-title fw-bold mb-3 text-decoration-underline">Desenvolvimento Mobile</h3>
+                <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">
+                    <li class="skill-badge">Android</li>
+                    <li class="skill-badge">iOS</li>
+                    <li class="skill-badge">Apache Cordova</li>
+                    <li class="skill-badge">Responsividade e UX Mobile</li>
+                    <li class="skill-badge">Push Notifications</li>
+                    <li class="skill-badge">Plugins e Integrações Nativas</li>
+                </ul>
+            </section>
         </div>
-    </section>
+        </section>
 
-    <hr class="section-divider" />
+        <hr class="section-divider" aria-hidden="true" />
 
-    <!-- Contato -->
-    <section id="contato" class="bg-body py-5">
+        <section id="contato" class="bg-body py-5" aria-labelledby="titulo-contato">
         <div class="container text-center">
-            <h2 class="section-title mb-4">
-                <i class="bi bi-chat-dots-fill text-primary me-2"></i> Contato
+            <h2 id="titulo-contato" class="section-title mb-4">
+                <i class="bi bi-chat-dots-fill text-primary me-2" aria-hidden="true"></i> Contato
             </h2>
             <p class="mb-4">Aberto a novas oportunidades, parcerias e projetos.</p>
 
             <div class="mb-3">
                 <p class="mb-1">
-                    <i class="bi bi-envelope-fill text-primary fs-5 me-2"></i>
+                    <i class="bi bi-envelope-fill text-primary fs-5 me-2" aria-hidden="true"></i>
                     <a href="mailto:eduardoradieske@gmail.com" class="text-decoration-none text-body fw-semibold">
                         eduardoradieske@gmail.com
                     </a>
@@ -425,26 +423,26 @@
 
             <div class="d-flex justify-content-center gap-3 mt-3">
                 <a href="https://www.linkedin.com/in/eduardo-radieske-408485238/" target="_blank"
-                    class="btn btn-primary d-flex align-items-center">
-                    <i class="bi bi-linkedin me-2 fs-5"></i> LinkedIn
+                    rel="noopener noreferrer" class="btn btn-primary d-flex align-items-center">
+                    <i class="bi bi-linkedin me-2 fs-5" aria-hidden="true"></i> LinkedIn
                 </a>
 
                 <a href="https://github.com/EduardoRadieske" target="_blank"
-                    class="btn d-flex align-items-center theme-btn-github">
-                    <i class="bi bi-github me-2 fs-5"></i> GitHub
+                    rel="noopener noreferrer" class="btn d-flex align-items-center theme-btn-github">
+                    <i class="bi bi-github me-2 fs-5" aria-hidden="true"></i> GitHub
                 </a>
 
                 <a href="https://gitlab.com/eduardoradieske" target="_blank" rel="noopener noreferrer" 
-                    class="btn d-flex align-items-center theme-btn-gitlab"> 
-                    <i class="bi bi-gitlab me-2 fs-5"></i> GitLab 
+                    class="btn d-flex align-items-center theme-btn-gitlab">
+                    <i class="bi bi-gitlab me-2 fs-5" aria-hidden="true"></i> GitLab
                 </a>
             </div>
         </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer>
-        <p class="mb-0">© 2026 Eduardo Radieske - Todos os direitos reservados</p>
+        <p class="mb-0"><small>© 2026 Eduardo Radieske - Todos os direitos reservados</small></p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
